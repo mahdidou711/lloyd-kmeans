@@ -1,0 +1,23 @@
+[project]
+authors = [{name = "Mehdi Bouama"}]
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+name = "numpy-lloyd-clustering"
+version = "0.1.0"
+description = "Lloyd K-means in NumPy with reproducible synthetic examples"
+requires-python = "==3.12.*"
+dependencies = ["numpy>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "scipy>=1.13", "scikit-learn>=1.5"]
+
+[build-system]
+requires = ["uv_build>=0.8,<0.14"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv.build-backend]
+module-name = "lloyd_kmeans"
